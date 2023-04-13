@@ -113,7 +113,7 @@ const Post = () => {
           <button
             type="submit"
             onClick={submitComment}
-            className="bg-egg w-36 px-1 mx-2 m2 border rounded-lg lg:mt-0"
+            className="bg-egg w-36 h-7 px-1 mx-2 m2 border rounded-lg lg:mt-0"
           >
             Add Comment
           </button>
