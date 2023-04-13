@@ -82,7 +82,7 @@ const Post = () => {
   };
 
   return (
-    <div className="bg-[#202020] w-full h-screen flex items-center">
+    <div className="bg-[#202020] w-full h-screen flex flex-col items-center md:flex-row">
       <div className="mx-5 w-2/4">
         <h1 className="text-white text-3xl">{postData.title}</h1>
         <h3 className="bg-white my-5 p-3 w-80 h-60 rounded-xl">
@@ -101,7 +101,7 @@ const Post = () => {
           )}
         </div>
       </div>
-      <div className="flex flex-col">
+      <div className="mt-3 flex flex-col md:mt-0">
         <div>
           <input
             onChange={(e) => setCommentInput(e.target.value)}
