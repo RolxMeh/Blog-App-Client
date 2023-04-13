@@ -85,7 +85,7 @@ const Post = () => {
     <div className="bg-[#202020] w-full h-screen pt-4 flex flex-col items-center md:flex-row">
       <div className="mx-1 w-full md:w-2/4 md:mx-5">
         <h1 className="text-white text-3xl">{postData.title}</h1>
-        <h3 className="bg-white my-5 p-3 w-[94%] h-60 rounded-xl md:w-80">
+        <h3 className="bg-white my-5 p-3 w-[88%] h-60 rounded-xl md:w-80">
           {postData.postText}
         </h3>
 
@@ -113,7 +113,7 @@ const Post = () => {
           <button
             type="submit"
             onClick={submitComment}
-            className="bg-egg w-auto px-1 mx-2 m2 border rounded-lg lg:mt-0"
+            className="bg-egg w-28 px-1 mx-2 m2 border rounded-lg lg:mt-0"
           >
             Add Comment
           </button>
