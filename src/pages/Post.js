@@ -102,7 +102,7 @@ const Post = () => {
         </div>
       </div>
       <div className="mt-3 flex flex-col md:mt-0">
-        <div className="flex flex-col lg:flex-row">
+        <div className="flex flex-col items-center lg:flex-row">
           <input
             onChange={(e) => setCommentInput(e.target.value)}
             value={commentInput}
