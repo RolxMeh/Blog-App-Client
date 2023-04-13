@@ -82,8 +82,8 @@ const Post = () => {
   };
 
   return (
-    <div className="bg-[#202020] w-full h-full flex flex-col items-center md:w-screen md:flex-row">
-      <div className="mx-1 w-2/4 md:mx-5">
+    <div className="bg-[#202020] w-full h-screen pt-4 flex flex-col items-center md:flex-row">
+      <div className="mx-1 w-full md:w-2/4 md:mx-5">
         <h1 className="text-white text-3xl">{postData.title}</h1>
         <h3 className="bg-white my-5 p-3 w-[94%] h-60 rounded-xl md:w-80">
           {postData.postText}
@@ -102,7 +102,7 @@ const Post = () => {
         </div>
       </div>
       <div className="mt-3 flex flex-col md:mt-0">
-        <div className="flex flex col lg:flex-row">
+        <div className="flex flex-col lg:flex-row">
           <input
             onChange={(e) => setCommentInput(e.target.value)}
             value={commentInput}
@@ -113,7 +113,7 @@ const Post = () => {
           <button
             type="submit"
             onClick={submitComment}
-            className="bg-egg px-1 mx-2 m2 border rounded-lg lg:mt-0"
+            className="bg-egg w-auto px-1 mx-2 m2 border rounded-lg lg:mt-0"
           >
             Add Comment
           </button>
