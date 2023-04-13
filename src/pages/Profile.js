@@ -10,13 +10,13 @@ const Profile = () => {
   let navigate = useNavigate();
 
   useEffect(() => {
-    Axios.get(`http://localhost:4000/auth/userId/${id}`).then((response) =>
-      setUsername(response.data.username)
+    Axios.get(`https://blog-server-d5d2.onrender.com/auth/userId/${id}`).then(
+      (response) => setUsername(response.data.username)
     );
 
-    Axios.get(`http://localhost:4000/posts/byUserId/${id}`).then((response) =>
-      setUserPosts(response.data)
-    );
+    Axios.get(
+      `https://blog-server-d5d2.onrender.com/posts/byUserId/${id}`
+    ).then((response) => setUserPosts(response.data));
   }, []);
   return (
     <div className="bg-[#202020] w-full h-screen flex items-center flex-col">

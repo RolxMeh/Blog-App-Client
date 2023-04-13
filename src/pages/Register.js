@@ -18,9 +18,11 @@ const Register = () => {
   });
 
   const handleSubmit = (data) => {
-    Axios.post("http://localhost:4000/auth", data).then((res) => {
-      res.data.err ? console.log(res.data.err) : navigate("/");
-    });
+    Axios.post("https://blog-server-d5d2.onrender.com/auth", data).then(
+      (res) => {
+        res.data.err ? console.log(res.data.err) : navigate("/");
+      }
+    );
   };
   return (
     <div className="bg-[#202020] w-full h-screen flex justify-center items-center">

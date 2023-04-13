@@ -15,18 +15,22 @@ const Post = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   useEffect(() => {
-    Axios.get(`http://localhost:4000/post/byId/${id}`).then((res) => {
-      setPostData(res.data[0]);
-    });
+    Axios.get(`https://blog-server-d5d2.onrender.com/post/byId/${id}`).then(
+      (res) => {
+        setPostData(res.data[0]);
+      }
+    );
 
-    Axios.get(`http://localhost:4000/comments/${id}`).then((res) => {
-      setComments(res.data);
-    });
+    Axios.get(`https://blog-server-d5d2.onrender.com/comments/${id}`).then(
+      (res) => {
+        setComments(res.data);
+      }
+    );
   }, []);
 
   const submitComment = () => {
     Axios.post(
-      `http://localhost:4000/comments/${id}`,
+      `https://blog-server-d5d2.onrender.com/comments/${id}`,
       {
         commentBody: commentInput,
       },
@@ -46,7 +50,7 @@ const Post = () => {
   };
   const handleLike = () => {
     Axios.post(
-      `http://localhost:4000/likes/${id}`,
+      `https://blog-server-d5d2.onrender.com/likes/${id}`,
       {},
       {
         headers: {
@@ -59,7 +63,7 @@ const Post = () => {
   };
 
   const deletePost = () => {
-    Axios.delete(`http://localhost:4000/posts/${id}`, {
+    Axios.delete(`hhttps://blog-server-d5d2.onrender.com/posts/${id}`, {
       headers: {
         accessToken: localStorage.getItem("accessToken"),
       },
@@ -67,7 +71,7 @@ const Post = () => {
   };
 
   const deleteComment = (id) => {
-    Axios.delete(`http://localhost:4000/comments/${id}`, {
+    Axios.delete(`https://blog-server-d5d2.onrender.com/comments/${id}`, {
       headers: {
         accessToken: localStorage.getItem("accessToken"),
         thePostId: postId,

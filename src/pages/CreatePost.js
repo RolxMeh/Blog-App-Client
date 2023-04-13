@@ -18,7 +18,7 @@ const CreatePost = () => {
   const navigate = useNavigate();
 
   const handleSubmit = (data) => {
-    Axios.post("http://localhost:4000/posts", data, {
+    Axios.post("https://blog-server-d5d2.onrender.com/posts", data, {
       headers: {
         accessToken: localStorage.getItem("accessToken"),
       },

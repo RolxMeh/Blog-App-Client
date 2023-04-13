@@ -8,7 +8,7 @@ const Home = () => {
   let navigate = useNavigate();
 
   useEffect(() => {
-    Axios.get("http://localhost:4000/posts")
+    Axios.get("https://blog-server-d5d2.onrender.com/posts")
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
   }, []);
